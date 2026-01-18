@@ -25,8 +25,26 @@
   },
   {
     "id": "game5",
-    "name": "Lật Hình Giống Nhau",
+    "name": "Tìm Ảnh Giống Nhau",
     "icon": "https://1617play-commits.github.io/games/game5/icon.png",
     "url": "https://1617play-commits.github.io/games/game5/index.html"
+  },
+  {
+    "id": "game6",
+    "name": "2048",
+    "icon": "https://1617play-commits.github.io/games/game6/icon.png",
+    "url": "https://1617play-commits.github.io/games/game6/index.html"
+  },
+  {
+    "id": "game7",
+    "name": "Máy Bay Chiến Đấu",
+    "icon": "https://1617play-commits.github.io/games/game7/icon.png",
+    "url": "https://1617play-commits.github.io/games/game7/index.html"
+  },
+  {
+    "id": "game8",
+    "name": "Nhảy Đi Nào",
+    "icon": "https://1617play-commits.github.io/games/game8/icon.png",
+    "url": "https://1617play-commits.github.io/games/game8/index.html"
   }
 ]
