@@ -2,19 +2,19 @@
   {
     "id": "game1",
     "name": "Game 1",
-    "icon": "games/game1/icon.png",
-    "url": "games/game1/index.html"
+    "icon": "https://1617play-commits.github.io/games/game1/icon.png",
+    "url": "https://1617play-commits.github.io/games/game1/index.html"
   },
     {
     "id": "game2",
     "name": "Game 2",
-    "icon": "games/game2/icon.png",
-    "url": "games/game2/index.html"
+    "icon": "https://1617play-commits.github.io/games/game2/icon.png",
+    "url": "https://1617play-commits.github.io/games/game2/index.html"
   },
     {
     "id": "game3",
     "name": "Game 3",
-    "icon": "games/game3/icon.png",
-    "url": "games/game3/index.html"
+    "icon": "https://1617play-commits.github.io/games/game3/icon.png",
+    "url": "https://1617play-commits.github.io/games/game3/index.html"
   }
 ]
