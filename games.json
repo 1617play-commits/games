@@ -1,20 +1,26 @@
 [
   {
     "id": "game1",
-    "name": "Game 1",
+    "name": "Clash Of Vikings",
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html"
   },
     {
     "id": "game2",
-    "name": "Game 2",
+    "name": "Vượt Chướng Ngại Vật",
     "icon": "https://1617play-commits.github.io/games/game2/icon.png",
     "url": "https://1617play-commits.github.io/games/game2/index.html"
   },
     {
     "id": "game3",
-    "name": "Game 3",
+    "name": "Xếp Rubik",
     "icon": "https://1617play-commits.github.io/games/game3/icon.png",
     "url": "https://1617play-commits.github.io/games/game3/index.html"
+  },
+  {
+    "id": "game4",
+    "name": "Ếch Bắt Ruồi",
+    "icon": "https://1617play-commits.github.io/games/game4/icon.png",
+    "url": "https://1617play-commits.github.io/games/game4/index.html"
   }
 ]
