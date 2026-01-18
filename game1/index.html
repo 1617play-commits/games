@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+	<title>CLASH OF VIKINGS</title>
+	<link rel="shortcut icon" href="icon.png">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<meta name="viewport"
+	      content="width=device-width,
+	               height=device-height,
+	               initial-scale=1.0,
+	               maximum-scale=1.0,
+	               user-scalable=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" type="text/css" href="game.css">	
+	<script type="text/javascript" src="game.js"></script>
+	
+<!-- AnalyticsCode -->	
+
+<!-- APICode -->
+
+<style>
+	html, body {
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: hidden;
+	  background: #000;
+	}
+
+	#ajaxbar,
+	#game,
+	#canvas {
+	  width: 100%;
+	  height: 100%;
+	}
+
+	canvas {
+	  display: block;
+	}
+</style>
+
+</head>
+
+<body onLoad="setTimeout(function(){window.scrollTo(0,1)},1);">
+	
+	<div class="gamecenter-activator"></div>
+		
+	<div id="ajaxbar">
+		<div id="game"><canvas id="canvas"></canvas></div>
+		<div id="orientate"><img src="media/graphics/orientate/landscape.jpg" /></div>
+		<div id="play" class="play" onClick=""><img src="media/graphics/splash/mobile/cover-start.jpg" /></div>	
+	</div>	 
+</body>
+</html>
