@@ -22,5 +22,11 @@
     "name": "Ếch Bắt Ruồi",
     "icon": "https://1617play-commits.github.io/games/game4/icon.png",
     "url": "https://1617play-commits.github.io/games/game4/index.html"
+  },
+  {
+    "id": "game5",
+    "name": "Lật Hình Giống Nhau",
+    "icon": "https://1617play-commits.github.io/games/game5/icon.png",
+    "url": "https://1617play-commits.github.io/games/game5/index.html"
   }
 ]
