@@ -37,14 +37,8 @@
   },
   {
     "id": "game7",
-    "name": "Máy Bay Chiến Đấu",
+    "name": "Bắn Máy Bay",
     "icon": "https://1617play-commits.github.io/games/game7/icon.png",
     "url": "https://1617play-commits.github.io/games/game7/index.html"
-  },
-  {
-    "id": "game8",
-    "name": "Nhảy Đi Nào",
-    "icon": "https://1617play-commits.github.io/games/game8/icon.png",
-    "url": "https://1617play-commits.github.io/games/game8/index.html"
   }
 ]

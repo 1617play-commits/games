@@ -293,7 +293,7 @@
                 document.getElementsByClassName('score')[0].style.display = 'none';
                 document.getElementById('name-over').getElementsByTagName('i')[0].innerHTML = 'GAME OVER!';
                 document.getElementById('name-over').getElementsByTagName('p')[0].innerHTML = this.score.innerHTML;
-                document.getElementById('startBtn').value = 'AGAIN';
+                document.getElementById('startBtn').value = 'Chơi lại';
 
                 while(this.layout.hasChildNodes()){
                     this.layout.removeChild(this.layout.firstChild);
