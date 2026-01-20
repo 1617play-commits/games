@@ -31,7 +31,7 @@
   },
   {
     "id": "game6",
-    "name": "2048",
+    "name": "Xếp Thú",
     "icon": "https://1617play-commits.github.io/games/game6/icon.png",
     "url": "https://1617play-commits.github.io/games/game6/index.html"
   },
@@ -40,5 +40,23 @@
     "name": "Bắn Máy Bay",
     "icon": "https://1617play-commits.github.io/games/game7/icon.png",
     "url": "https://1617play-commits.github.io/games/game7/index.html"
+  },
+  {
+    "id": "game8",
+    "name": "Mê Cung Bí Mật",
+    "icon": "https://1617play-commits.github.io/games/game8/icon.png",
+    "url": "https://1617play-commits.github.io/games/game8/index.html"
+  },
+  {
+    "id": "game9",
+    "name": "Bảo Vệ Mặt Trời",
+    "icon": "https://1617play-commits.github.io/games/game9/icon.png",
+    "url": "https://1617play-commits.github.io/games/game9/index.html"
+  },
+  {
+    "id": "game10",
+    "name": "Pacman",
+    "icon": "https://1617play-commits.github.io/games/game10/icon.png",
+    "url": "https://1617play-commits.github.io/games/game10/index.html"
   }
 ]
