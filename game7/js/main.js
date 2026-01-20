@@ -13,7 +13,7 @@
 
          var myGame = {
 
-            data : {  //·É»úÊı¾İ
+            data : {  //Â·Ã‰Â»ÃºÃŠÃ½Â¾Ã
 
                 BULLET : {
                     p:{name:'b1',speed:30},
@@ -42,7 +42,7 @@
 
             },
 
-            init : function(){ //³õÊ¼»¯
+            init : function(){ //Â³ÃµÃŠÂ¼Â»Â¯
 
                 var layout = document.getElementById('layout'),
                     mystart = document.getElementById('start'),
@@ -63,7 +63,7 @@
 
             },
 
-            createPlane : function(){  //´´½¨·É»ú
+            createPlane : function(){  //Â´Â´Â½Â¨Â·Ã‰Â»Ãº
 
                 var That = this;
 
@@ -86,7 +86,7 @@
                 },1000)
             },
 
-            createEnemy : function(){   //´´½¨µĞ»ú
+            createEnemy : function(){   //Â´Â´Â½Â¨ÂµÃÂ»Ãº
 
                 var e = this.data.eArr[~~(Math.random()*60)];
 
@@ -103,7 +103,7 @@
 
                 this.layout.append(ey);
 
-                //×Óµ¯Åö×²
+                //Ã—Ã“ÂµÂ¯Ã…Ã¶Ã—Â²
                 if(this.data.ENEMY.bullet[e]){
                     var That = this;
                     ey.timer1  = setInterval(function(){
@@ -115,7 +115,7 @@
                 this.runEnemy(ey);
             },
 
-            runEnemy : function(obj){   //µĞ»úÔË¶¯
+            runEnemy : function(obj){   //ÂµÃÂ»ÃºÃ”Ã‹Â¶Â¯
                 var That = this;
                 obj.timer = setInterval(function(){
 
@@ -127,7 +127,7 @@
                     };
 
                     for(var i = 0, e = document.getElementsByClassName('enemy') ,len = e.length; i<len; i++){
-                        if(That.TC(e[i],That.plane) ){  //ÓëµĞ»úÅö×²]
+                        if(That.TC(e[i],That.plane) ){  //Ã“Ã«ÂµÃÂ»ÃºÃ…Ã¶Ã—Â²]
 
                             clearInterval(obj.timer);
                             That.gameOver();
@@ -141,7 +141,7 @@
                 },30)
             },
 
-            createBullet : function(name, obj, h, direction){  //´´½¨×Óµ¯
+            createBullet : function(name, obj, h, direction){  //Â´Â´Â½Â¨Ã—Ã“ÂµÂ¯
 
                 var bt = document.createElement('div');
                 bt.className = name;
@@ -163,7 +163,7 @@
                 }
             },
 
-            speedDecomposition : function(pl,bt){   //¼ÆËãµĞ»ú×Óµ¯·½Ïò£¬»÷Ïò·É»ú
+            speedDecomposition : function(pl,bt){   //Â¼Ã†Ã‹Ã£ÂµÃÂ»ÃºÃ—Ã“ÂµÂ¯Â·Â½ÃÃ²Â£Â¬Â»Ã·ÃÃ²Â·Ã‰Â»Ãº
 
                 var plleft = pl.offsetLeft,
                     pltop = pl.offsetTop,
@@ -180,13 +180,13 @@
 
             },
 
-            runBullet : function(b,x,y){   //×Óµ¯ÔË¶¯
+            runBullet : function(b,x,y){   //Ã—Ã“ÂµÂ¯Ã”Ã‹Â¶Â¯
 
                 var That = this;
 
                 b.timer = setInterval(function(){
 
-                    if(b.offsetTop <= 30 || b.offsetTop >= That.layout.offsetHeight || b.offsetLeft <= 0 || b.offsetLeft >= That.layout.offsetWidth){   //±ß½çÅĞ¶Ï
+                    if(b.offsetTop <= 30 || b.offsetTop >= That.layout.offsetHeight || b.offsetLeft <= 0 || b.offsetLeft >= That.layout.offsetWidth){   //Â±ÃŸÂ½Ã§Ã…ÃÂ¶Ã
 
                         clearInterval(b.timer);
                         That.layout.removeChild(b);
@@ -233,51 +233,53 @@
                 },30)
             },
 
-            bindPlane : function(p){   //¿ØÖÆ·É»úÊó±êÊÂ¼ş
+            bindPlane: function (p) {
+                var layout = this.layout;
 
-                var lagoutx = this.layout.offsetLeft,
-                    lagouty = this.layout.offsetTop,
+                var layoutRect = layout.getBoundingClientRect();
+                var layoutW = layout.offsetWidth;
+                var layoutH = layout.offsetHeight;
 
-                    lagoutw = this.layout.offsetWidth,
-                    lagouth = this.layout.offsetHeight;
+                function movePlane(clientX, clientY) {
+                    var x = clientX - layoutRect.left - p.offsetWidth / 2;
+                    var y = clientY - layoutRect.top - p.offsetHeight / 2;
 
-                p.onmousedown = function(event){
+                    if (x < 0) x = 0;
+                    if (x > layoutW - p.offsetWidth) x = layoutW - p.offsetWidth;
 
-                    var px = p.offsetLeft,
-                        py = p.offsetTop,
+                    if (y < 0) y = 0;
+                    if (y > layoutH - p.offsetHeight) y = layoutH - p.offsetHeight;
 
-                        dx = event.clientX - lagoutx - p.offsetWidth/2,
-                        dy = event.clientY - lagouty - p.offsetHeight/2;
-
-                    document.onmousemove = function(event){
-
-                        dx = event.clientX - lagoutx - p.offsetWidth / 2;
-                        dy = event.clientY - lagouty - p.offsetHeight / 2;
-
-                        if( dx <= 0 ){
-                            dx = 0 ;
-                        }else if( dx >= lagoutw - p.offsetWidth){
-                            dx = lagoutw - p.offsetWidth;
-                        }
-
-                        if( dy <= 0 ){
-                            dy = 0;
-                        }else if( dy >= lagouth - p.offsetHeight){
-                            dy =  lagouth - p.offsetHeight;
-                        }
-
-                        p.style.cssText = 'left :' + dx +'px; top :' + dy + 'px';
-
-                    }
-
-                    document.onmouseup = function(event){
-
-                        document.onmousemove = null;
-
-                    }
-
+                    p.style.left = x + 'px';
+                    p.style.top = y + 'px';
                 }
+
+                /* ===== PC â€“ Chuá»™t ===== */
+                p.addEventListener('mousedown', function (e) {
+                    e.preventDefault();
+
+                    function mouseMove(e) {
+                        movePlane(e.clientX, e.clientY);
+                    }
+
+                    document.addEventListener('mousemove', mouseMove);
+                    document.addEventListener('mouseup', function () {
+                        document.removeEventListener('mousemove', mouseMove);
+                    }, { once: true });
+                });
+
+                /* ===== Mobile â€“ Cáº£m á»©ng ===== */
+                p.addEventListener('touchstart', function (e) {
+                    e.preventDefault();
+                }, { passive: false });
+
+                p.addEventListener('touchmove', function (e) {
+                    e.preventDefault();
+                    var touch = e.touches[0];
+                    movePlane(touch.clientX, touch.clientY);
+                }, { passive: false });
             },
+
 
             gameOver : function(){
 
@@ -301,17 +303,17 @@
 
             },
 
-            TC : function(obj1,obj2){   //Åö×²¼ì²â
+            TC : function(obj1,obj2){   //Ã…Ã¶Ã—Â²Â¼Ã¬Â²Ã¢
 
-                var t1 = obj1.offsetTop,                      //ÉÏ
-                    r1 = obj1.offsetLeft + obj1.offsetWidth,  //ÓÒ
-                    b1 = obj1.offsetTop + obj1.offsetHeight,  //ÏÂ
-                    l1 = obj1.offsetLeft,                     //×ó
+                var t1 = obj1.offsetTop,                      //Ã‰Ã
+                    r1 = obj1.offsetLeft + obj1.offsetWidth,  //Ã“Ã’
+                    b1 = obj1.offsetTop + obj1.offsetHeight,  //ÃÃ‚
+                    l1 = obj1.offsetLeft,                     //Ã—Ã³
 
-                    t2 = obj2.offsetTop,                      //ÉÏ
-                    r2 = obj2.offsetLeft + obj2.offsetWidth,  //ÓÒ
-                    b2 = obj2.offsetTop + obj2.offsetHeight,  //ÏÂ
-                    l2 = obj2.offsetLeft;                     //×ó
+                    t2 = obj2.offsetTop,                      //Ã‰Ã
+                    r2 = obj2.offsetLeft + obj2.offsetWidth,  //Ã“Ã’
+                    b2 = obj2.offsetTop + obj2.offsetHeight,  //ÃÃ‚
+                    l2 = obj2.offsetLeft;                     //Ã—Ã³
 
                 if(t1 > b2 || b1 < t2 || r1 < l2 || l1 > r2){
                     return false;
