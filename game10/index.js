@@ -46,6 +46,7 @@
 	_SCORE = 0;		//得分
 
 	var game = new Game('canvas');
+	var canvas = document.getElementById('canvas');
 	var touchStartX = 0;
 	var touchStartY = 0;
 	var touchMoved = false;
@@ -108,54 +109,10 @@
 				break;
 			}
 		});
-				/* =========================
-		   MOBILE TOUCH CONTROL
-		========================= */
+		stage.bind('touchstart', function () {
+		    game.nextStage();
+		});
 
-		var canvas = document.getElementById('canvas');
-
-		canvas.addEventListener('touchstart', function (e) {
-		    var t = e.touches[0];
-		    touchStartX = t.clientX;
-		    touchStartY = t.clientY;
-		    touchMoved = false;
-		    e.preventDefault();
-		}, { passive: false });
-
-		canvas.addEventListener('touchmove', function (e) {
-		    touchMoved = true;
-		    e.preventDefault();
-		}, { passive: false });
-
-		canvas.addEventListener('touchend', function (e) {
-		    var dx = e.changedTouches[0].clientX - touchStartX;
-		    var dy = e.changedTouches[0].clientY - touchStartY;
-
-		    // Tap = Play / Pause
-		    if (!touchMoved || (Math.abs(dx) < 10 && Math.abs(dy) < 10)) {
-		        stage.status = stage.status === 2 ? 1 : 2;
-		        return;
-		    }
-
-		    // Swipe detect
-		    if (Math.abs(dx) > Math.abs(dy)) {
-		        // LEFT / RIGHT
-		        if (dx > 0) {
-		            player.control = { orientation: 0 }; // RIGHT
-		        } else {
-		            player.control = { orientation: 2 }; // LEFT
-		        }
-		    } else {
-		        // UP / DOWN
-		        if (dy > 0) {
-		            player.control = { orientation: 1 }; // DOWN
-		        } else {
-		            player.control = { orientation: 3 }; // UP
-		        }
-		    }
-
-		    e.preventDefault();
-		}, { passive: false });
 
 	})();
 	//游戏主程序
@@ -567,6 +524,50 @@
 				break;
 			}
 		});
+		/* =========================
+   MOBILE TOUCH CONTROL (GAME STAGE ONLY)
+========================= */
+
+canvas.addEventListener('touchstart', function (e) {
+    if(stage.index !== 1) return; // CHỈ GAME STAGE
+
+    var t = e.touches[0];
+    touchStartX = t.clientX;
+    touchStartY = t.clientY;
+    touchMoved = false;
+    e.preventDefault();
+}, { passive: false });
+
+
+canvas.addEventListener('touchmove', function (e) {
+    if(stage.index !== 1) return;
+    touchMoved = true;
+    e.preventDefault();
+}, { passive: false });
+
+
+canvas.addEventListener('touchend', function (e) {
+    if(stage.index !== 1) return;
+    if(stage.status === 0) return; // CHẶN PAUSE NGAY KHI MỚI VÀO
+
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+
+    if (!touchMoved || (Math.abs(dx) < 10 && Math.abs(dy) < 10)) {
+        stage.status = stage.status === 2 ? 1 : 2;
+        return;
+    }
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        player.control = { orientation: dx > 0 ? 0 : 2 };
+    } else {
+        player.control = { orientation: dy > 0 ? 1 : 3 };
+    }
+
+    e.preventDefault();
+}, { passive: false });
+
+
 	})();
 	//结束画面
 	(function(){
