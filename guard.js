@@ -2,52 +2,48 @@
   try {
     /* ========= CONFIG ========= */
     const ALLOW_REFERRER = [
-      '1617play',          // web / app domain
-      'localhost',         // dev
+      '1617play',          // domain / brand
+      'localhost'
     ];
 
-    /* ========= ENV DETECT ========= */
+    /* ========= ENV ========= */
     const ref = document.referrer || '';
-    const isIframe = window.top !== window.self;
     const protocol = location.protocol;
 
-    // App WebView (Capacitor / Cordova)
     const isApp =
       protocol === 'capacitor:' ||
       protocol === 'ionic:' ||
       protocol === 'file:';
 
-    // Referrer hợp lệ
-    const isAllowedReferrer = ALLOW_REFERRER.some(d =>
-      ref.includes(d)
-    );
+    const hasReferrer = ref.length > 0;
+    const isAllowedReferrer = ALLOW_REFERRER.some(d => ref.includes(d));
 
     /* ========= RULE ========= */
     /**
-     * CHO PHÉP nếu:
-     * 1. Chạy trong App
-     * 2. Hoặc được mở từ launcher 1617Play
+     * CHO PHÉP:
+     * - Chạy trong APP
+     * - Chạy từ launcher 1617Play (CÓ referrer hợp lệ)
      *
-     * CHẶN nếu:
-     * - Iframe từ nguồn khác
-     * - Mở trực tiếp link game trên browser
+     * CHẶN:
+     * - Mở trực tiếp link (KHÔNG referrer)
+     * - Nhúng iframe từ nơi khác
      */
     if (!isApp) {
-      // Không phải app → phải có referrer hợp lệ
-      if (!isAllowedReferrer) {
+      // ❌ Mở trực tiếp link → CHẶN
+      if (!hasReferrer) {
         block();
         return;
       }
 
-      // Có referrer nhưng bị iframe từ nơi khác
-      if (isIframe && !isAllowedReferrer) {
+      // ❌ Có referrer nhưng không phải của mình → CHẶN
+      if (!isAllowedReferrer) {
         block();
         return;
       }
     }
 
-    /* ========= PASS ========= */
-    // console.log('1617Play guard: OK');
+    // PASS
+    // console.log('1617Play Guard: OK');
 
     function block() {
       document.documentElement.innerHTML = '';
@@ -55,8 +51,9 @@
       document.body.style.background = '#000';
       throw new Error('Blocked by 1617Play Guard');
     }
+
   } catch (e) {
-    // Fail-safe: nếu guard lỗi → vẫn chặn
+    // Fail-safe
     document.body.innerHTML = '';
   }
 })();
