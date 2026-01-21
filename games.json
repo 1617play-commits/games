@@ -4,7 +4,8 @@
     "name": "Clash Of Vikings",
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html",
-	"category": "hanh-dong"
+	"category": "hanh-dong",
+	"featured": true
   },
     {
     "id": "game2",
