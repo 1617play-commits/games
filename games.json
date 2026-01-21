@@ -4,8 +4,8 @@
     "name": "Clash Of Vikings",
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html",
-  	"category": "hanh-dong",
-  	"featured": true
+  	"category": "hanh-dong"
+
   },
     {
     "id": "game2",
@@ -35,7 +35,8 @@
     "name": "Tìm Ảnh Giống Nhau",
     "icon": "https://1617play-commits.github.io/games/game5/icon.png",
     "url": "https://1617play-commits.github.io/games/game5/index.html",
-	 "category": "tri-tue"
+	 "category": "tri-tue",
+      "featured": true
   },
   {
     "id": "game7",
