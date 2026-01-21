@@ -1,49 +1,37 @@
 (function () {
   try {
     /* ========= CONFIG ========= */
-    const ALLOW_REFERRER = [
-      '1617play',          // domain / brand
-      'localhost'
+    // CHỈ CHO PHÉP LAUNCHER ORIGIN CỤ THỂ
+    const ALLOW_ORIGIN = [
+      'https://1617play.com',              // nếu có web
+      'capacitor://localhost',             // app Android/iOS
+      'ionic://localhost',
+      'file://'
     ];
 
     /* ========= ENV ========= */
-    const ref = document.referrer || '';
     const protocol = location.protocol;
+    const ref = document.referrer || '';
+    const origin = location.origin || '';
 
     const isApp =
       protocol === 'capacitor:' ||
       protocol === 'ionic:' ||
       protocol === 'file:';
 
-    const hasReferrer = ref.length > 0;
-    const isAllowedReferrer = ALLOW_REFERRER.some(d => ref.includes(d));
-
     /* ========= RULE ========= */
-    /**
-     * CHO PHÉP:
-     * - Chạy trong APP
-     * - Chạy từ launcher 1617Play (CÓ referrer hợp lệ)
-     *
-     * CHẶN:
-     * - Mở trực tiếp link (KHÔNG referrer)
-     * - Nhúng iframe từ nơi khác
-     */
-    if (!isApp) {
-      // ❌ Mở trực tiếp link → CHẶN
-      if (!hasReferrer) {
-        block();
-        return;
-      }
 
-      // ❌ Có referrer nhưng không phải của mình → CHẶN
-      if (!isAllowedReferrer) {
-        block();
-        return;
-      }
+    // ✅ APP LUÔN ĐƯỢC PHÉP
+    if (isApp) return;
+
+    // ❌ BROWSER: KHÔNG CHO MỞ TRỰC TIẾP GITHUB
+    // Chỉ cho phép nếu referrer BẮT ĐẦU BẰNG origin launcher
+    const allowed = ALLOW_ORIGIN.some(o => ref.startsWith(o));
+
+    if (!allowed) {
+      block();
+      return;
     }
-
-    // PASS
-    // console.log('1617Play Guard: OK');
 
     function block() {
       document.documentElement.innerHTML = '';
@@ -53,7 +41,6 @@
     }
 
   } catch (e) {
-    // Fail-safe
     document.body.innerHTML = '';
   }
 })();
