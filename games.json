@@ -36,13 +36,14 @@
     "icon": "https://1617play-commits.github.io/games/game5/icon.png",
     "url": "https://1617play-commits.github.io/games/game5/index.html",
 	 "category": "tri-tue",
-      "featured": true
+    "featured": true
   },
   {
     "id": "game7",
     "name": "Bắn Máy Bay",
     "icon": "https://1617play-commits.github.io/games/game7/icon.png",
     "url": "https://1617play-commits.github.io/games/game7/index.html",
-	 "category": "ban-sung"
+	 "category": "ban-sung",
+    "featured": true
   }
 ]
