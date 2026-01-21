@@ -2628,10 +2628,10 @@ var link, jsGame; (function() {
 							t = null
 					}).menu(function() {
 						e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7),
-							e.buttonLayout.released("difficulty1") ? (l.moduleName = "我的成绩", hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = "噩梦模式", c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = "地狱模式", c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = "炼狱模式", c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
+							e.buttonLayout.released("difficulty1") ? (l.moduleName = "Điểm của tôi", hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = "Chế độ ác mộng", c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = "Chế độ địa ngục", c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = "Chế độ luyện ngục", c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
 					}).zone(function() {
-						e.canvas.fillStyle("#90EE90").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, "秒"), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px 微软雅黑").fillStyle("#000").drawString("最佳:" + a(l.bestTime, "秒"), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px 微软雅黑"),
-						l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString("新纪录", 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑"),
+						e.canvas.fillStyle("#90EE90").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px Tahoma").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, "giây"), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px Tahoma").fillStyle("#000").drawString("Tối ưu:" + a(l.bestTime, "giây"), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px Tahoma"),
+						l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString("Kỷ lục mới", 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px Tahoma"),
 							e.buttonLayout.released("return") ? f() : e.buttonLayout.released("restart") && dp_share2(l.time)
 					}).events.mouseDown(function(e, t, n) {
 							if (l.died) return ! 1;
@@ -2646,12 +2646,12 @@ var link, jsGame; (function() {
 						showAd();
 						e.buttonLayout.clear().create({
 							id: "difficulty1",
-							value: "开始游戏",
+							value: "Bắt đầu",
 							x: i - 272 >> 1,
 							y: u + 180,
 							width: 272,
 							height: 80,
-							font: "36px 微软雅黑",
+							font: "36px Tahoma",
 							imageId: "btns1",
 							sx: 0,
 							sy: 0,
@@ -2664,12 +2664,12 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty2",
-							value: "噩梦模式",
+							value: "Chế độ ác mộng",
 							x: i - 272 >> 1,
 							y: u + 160 + 120,
 							width: 272,
 							height: 80,
-							font: "36px 微软雅黑",
+							font: "36px Tahoma",
 							imageId: "btns1",
 							sx: 0,
 							sy: 0,
@@ -2682,12 +2682,12 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty3",
-							value: "地狱模式",
+							value: "Chế độ địa ngục",
 							x: i - 272 >> 1,
 							y: u + 160 + 120+100,
 							width: 272,
 							height: 80,
-							font: "36px 微软雅黑",
+							font: "36px Tahoma",
 							imageId: "btns1",
 							sx: 0,
 							sy: 0,
@@ -2700,12 +2700,12 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty4",
-							value: "炼狱模式",
+							value: "Chế độ luyện ngục",
 							x: i - 272 >> 1,
 							y: u + 160 + 120+200,
 							width: 272,
 							height: 80,
-							font: "36px 微软雅黑",
+							font: "36px Tahoma",
 							imageId: "btns1",
 							sx: 0,
 							sy: 0,
@@ -2800,11 +2800,11 @@ var link, jsGame; (function() {
 							var t = i - 480 >> 1;
 							if (l.time > 10000) {
 								dp_share(l.time);
-								alert("强！你居然坚持了" + l.time / 1000 + "秒！")
+								alert("Tuyệt vời! Bạn thực sự đã kiên trì!" + l.time / 1000 + "giây！")
 							};
 							e.buttonLayout.clear().create({
 								id: "return",
-								value: "返回游戏主界面",
+								value: "Quay lại menu",
 								bgColor: "",
 								bgStroke: "",
 								stroke: "",
@@ -2812,7 +2812,7 @@ var link, jsGame; (function() {
 								y: u + 580,
 								width: 300,
 								height: 80,
-								font: "36px 微软雅黑",
+								font: "36px Tahoma",
 								imageId: "",
 								sx: 0,
 								sy: 0,
