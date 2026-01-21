@@ -24,7 +24,7 @@ var highscoreEl = document.querySelector('.js-highscore');
 var timerIntervalId;
 
 // Audio
-var musicPlaying = false;
+var musicPlaying = true;
 var musicButton = document.querySelector('.js-toggle-music')
 var music = document.querySelector('#music');
 
@@ -48,7 +48,12 @@ function init() {
   loadStorage();
   renderBest();
   toggleScreen(menuScreen);
+
+  // 🔥 auto bật nhạc
+  music.play().catch(function(){});
+  musicButton.textContent = "Stop Music";
 }
+
 function prepPaths() {
   for (var i = 0; i < paths.length; i++) {
     paths[i].setAttribute('data-id', i);
@@ -107,6 +112,12 @@ function toggleMusic() {
 }
 
 function play() {
+  if (!musicPlaying) {
+    musicPlaying = true;
+    music.play().catch(function(){});
+    musicButton.textContent = "Stop Music";
+  }
+
   playing = true;
   setState();
   renderScore();

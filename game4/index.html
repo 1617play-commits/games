@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>HTML5青蛙吃苍蝇小游戏代码 - 源码之家</title>
+<title>Ếch Bắt Ruồi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
 <style>
@@ -1230,24 +1230,24 @@ body.dark {
 </div>
 
 <div class="screen menu">
-  <h1>青蛙吃苍蝇</h1>
+  <h1>Ếch Bắt Ruồi</h1>
   <a href="#" class="btn play" onClick="play()">
-    <span class="text">开始游戏</span>
+    <span class="text">Bắt đầu</span>
     <br>
-    <span>最好成绩: <span class="js-best">0</span></span>
+    <span>Điểm cao nhất: <span class="js-best">0</span></span>
   </a>
-  <a href="#" class="btn" onClick="settings()">游戏设置</a>
+  <a href="#" class="btn" onClick="settings()">Cài đặt</a>
 </div>
 
 <div class="screen game">
   <div class="hud">
     <div class="time">
-      <span class="label">时间</span>
+      <span class="label">Thời gian</span>
       <span class="value js-time">30</span>
     </div>
 
     <div class="score">
-      <span class="label">分数</span>
+      <span class="label">Điểm</span>
       <span class="value js-score">0</span>
     </div>
   </div>
@@ -1289,51 +1289,51 @@ body.dark {
 </div>
 
 <div class="screen win">
-  <h1>完成</h1> 
+  <h1>Hoàn thành</h1> 
   <div class="card">
-    <h3 class="highscore js-highscore is-hidden">新高分！</h3>
+    <h3 class="highscore js-highscore is-hidden">Kỷ lục mới!</h3>
     
     <div class="score">
-      <span class="label">分数</span>
+      <span class="label">Điểm</span>
       <span class="value js-score">30</span>
     </div>
 
     <div class="best">
-      <span class="label">最好成绩</span>
+      <span class="label">Điểm cao nhất</span>
       <span class="value js-best">0</span>
     </div>
     
   </div>
-  <a href="#" class="btn" onClick="play()">再玩一次</a>
-  <a href="#" class="btn btn--clear" onClick="menu()">返回菜单</a>
+  <a href="#" class="btn" onClick="play()">Chơi lại</a>
+  <a href="#" class="btn btn--clear" onClick="menu()">Trở lại</a>
 </div>
 
 <div class="screen settings">
-  <h1>设置</h1>
+  <h1>Cài đặt</h1>
   
   <div class="card">
     <label class="checkbox">
       <input type="radio" name="theme" value="light" checked onClick="toggleTheme(this.value)">
-      <span>白天</span>
+      <span>Ngày</span>
     </label>
     <label class="checkbox">
       <input type="radio" name="theme" value="dark" onClick="toggleTheme(this.value)">
-      <span>晚上</span>
+      <span>Đêm</span>
     </label>
   </div>
   
-  <a href="#" class="btn js-toggle-music" onClick="toggleMusic()">打开音乐</a>
+  <a href="#" class="btn js-toggle-music" onClick="toggleMusic()">Bật nhạc</a>
   
-  <a href="#" class="btn" onClick="menu()">返回</a>
+  <a href="#" class="btn" onClick="menu()">Trở lại</a>
 </div>
 
 <div class="screen scoreboard">
-  <h1>记分牌</h1>
+  <h1>Bảng điểm</h1>
   <div class="card">
     <ol class="scoreboard-list js-scoreboard"></ol>
   </div>
   
-  <a href="#" class="btn" onClick="menu()">返回</a>
+  <a href="#" class="btn" onClick="menu()">Trở lại</a>
 </div>
 
 <audio id="music" src="zzsc.mp3"></audio>
