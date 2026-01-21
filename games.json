@@ -5,7 +5,8 @@
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html",
   	"category": "hanh-dong",
-  	"featured": true
+  	"featured": true,
+    "hot": true
   },
     {
     "id": "game2",
@@ -26,8 +27,7 @@
     "name": "Ếch Bắt Ruồi",
     "icon": "https://1617play-commits.github.io/games/game4/icon.png",
     "url": "https://1617play-commits.github.io/games/game4/index.html",
-  	"category": "vui-nhon",
-    "new": true
+  	"category": "vui-nhon"
   },
   {
     "id": "game5",
