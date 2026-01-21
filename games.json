@@ -5,8 +5,7 @@
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html",
   	"category": "hanh-dong",
-  	"featured": true,
-    "new": true
+  	"featured": true
   },
     {
     "id": "game2",
@@ -20,14 +19,16 @@
     "name": "Xếp Rubik",
     "icon": "https://1617play-commits.github.io/games/game3/icon.png",
     "url": "https://1617play-commits.github.io/games/game3/index.html",
-	 "category": "tri-tue"
+	   "category": "tri-tue",
+    "hot": true
   },
   {
     "id": "game4",
     "name": "Ếch Bắt Ruồi",
     "icon": "https://1617play-commits.github.io/games/game4/icon.png",
     "url": "https://1617play-commits.github.io/games/game4/index.html",
-  	"category": "vui-nhon"
+  	"category": "vui-nhon",
+    "new": true
   },
   {
     "id": "game5",
