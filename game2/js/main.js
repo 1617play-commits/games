@@ -2800,7 +2800,7 @@ var link, jsGame; (function() {
 							var t = i - 480 >> 1;
 							if (l.time > 10000) {
 								dp_share(l.time);
-								alert("Tuyệt vời! Bạn thực sự đã kiên trì!" + l.time / 1000 + "giây！")
+								alert("Tuyệt vời! Bạn đã chơi được " + l.time / 1000 + " giây")
 							};
 							e.buttonLayout.clear().create({
 								id: "return",
