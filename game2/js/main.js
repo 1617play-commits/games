@@ -2628,7 +2628,7 @@ var link, jsGame; (function() {
 							t = null
 					}).menu(function() {
 						e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7),
-							e.buttonLayout.released("difficulty1") ? (l.moduleName = "Điểm của tôi", hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = "Chế độ ác mộng", c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = "Chế độ địa ngục", c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = "Chế độ luyện ngục", c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
+							e.buttonLayout.released("difficulty1") ? (l.moduleName = "Điểm của tôi", hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = "Chế độ dễ", c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = "Chế độ thường", c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = "Chế độ khó", c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
 					}).zone(function() {
 						e.canvas.fillStyle("#90EE90").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px Tahoma").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, "giây"), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px Tahoma").fillStyle("#000").drawString("Tối ưu:" + a(l.bestTime, "giây"), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px Tahoma"),
 						l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString("Kỷ lục mới", 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px Tahoma"),
@@ -2664,7 +2664,7 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty2",
-							value: "Chế độ ác mộng",
+							value: "Chế độ dễ",
 							x: i - 272 >> 1,
 							y: u + 160 + 120,
 							width: 272,
@@ -2682,7 +2682,7 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty3",
-							value: "Chế độ địa ngục",
+							value: "Chế độ thường",
 							x: i - 272 >> 1,
 							y: u + 160 + 120+100,
 							width: 272,
@@ -2700,7 +2700,7 @@ var link, jsGame; (function() {
 							deColor: "#000"
 						}).create({
 							id: "difficulty4",
-							value: "Chế độ luyện ngục",
+							value: "Chế độ khó",
 							x: i - 272 >> 1,
 							y: u + 160 + 120+200,
 							width: 272,
