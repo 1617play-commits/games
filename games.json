@@ -39,11 +39,25 @@
     "featured": true
   },
   {
+    "id": "game6",
+    "name": "2048",
+    "icon": "https://1617play-commits.github.io/games/game6/icon.png",
+    "url": "https://1617play-commits.github.io/games/game6/index.html",
+   "category": "tri-tue"
+  },
+  {
     "id": "game7",
     "name": "Bắn Máy Bay",
     "icon": "https://1617play-commits.github.io/games/game7/icon.png",
     "url": "https://1617play-commits.github.io/games/game7/index.html",
-	 "category": "ban-sung",
+	 "category": "ban-sung"
+  },
+  {
+    "id": "game8",
+    "name": "Chiến Binh Huyền Thoại",
+    "icon": "https://1617play-commits.github.io/games/game8/icon.png",
+    "url": "https://1617play-commits.github.io/games/game8/index.html",
+   "category": "nhap-vai",
     "featured": true
   }
 ]
