@@ -61,6 +61,14 @@
     "category": "nhap-vai",
     "featured": true
   },
+    {
+    "id": "game9",
+    "name": "Đẩy Hộp",
+    "icon": "https://1617play-commits.github.io/games/game9/icon.png",
+    "url": "https://1617play-commits.github.io/games/game9/index.html",
+    "category": "nhap-vai",
+    "featured": false
+  },
   {
     "id": "game10",
     "name": "Đua Xe Đạp",
