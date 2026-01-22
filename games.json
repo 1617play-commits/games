@@ -12,14 +12,14 @@
     "name": "Vượt Chướng Ngại Vật",
     "icon": "https://1617play-commits.github.io/games/game2/icon.png",
     "url": "https://1617play-commits.github.io/games/game2/index.html",
-	 "category": "vui-nhon"
+	  "category": "vui-nhon"
   },
     {
     "id": "game3",
     "name": "Xếp Rubik",
     "icon": "https://1617play-commits.github.io/games/game3/icon.png",
     "url": "https://1617play-commits.github.io/games/game3/index.html",
-	   "category": "tri-tue",
+	  "category": "tri-tue",
     "hot": true
   },
   {
@@ -35,7 +35,7 @@
     "name": "Tìm Ảnh Giống Nhau",
     "icon": "https://1617play-commits.github.io/games/game5/icon.png",
     "url": "https://1617play-commits.github.io/games/game5/index.html",
-	 "category": "tri-tue",
+	  "category": "tri-tue",
     "featured": true
   },
   {
@@ -43,21 +43,22 @@
     "name": "2048",
     "icon": "https://1617play-commits.github.io/games/game6/icon.png",
     "url": "https://1617play-commits.github.io/games/game6/index.html",
-   "category": "tri-tue"
+    "category": "tri-tue",
+    "new": true
   },
   {
     "id": "game7",
     "name": "Bắn Máy Bay",
     "icon": "https://1617play-commits.github.io/games/game7/icon.png",
     "url": "https://1617play-commits.github.io/games/game7/index.html",
-	 "category": "ban-sung"
+	  "category": "ban-sung"
   },
   {
     "id": "game8",
     "name": "Chiến Binh Huyền Thoại",
     "icon": "https://1617play-commits.github.io/games/game8/icon.png",
     "url": "https://1617play-commits.github.io/games/game8/index.html",
-   "category": "nhap-vai",
+    "category": "nhap-vai",
     "featured": true
   }
 ]
