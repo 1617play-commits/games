@@ -28,7 +28,7 @@
     "icon": "https://1617play-commits.github.io/games/game4/icon.png",
     "url": "https://1617play-commits.github.io/games/game4/index.html",
   	"category": "vui-nhon",
-    "new": true
+    "featured": true
   },
   {
     "id": "game5",
@@ -36,7 +36,15 @@
     "icon": "https://1617play-commits.github.io/games/game5/icon.png",
     "url": "https://1617play-commits.github.io/games/game5/index.html",
 	  "category": "tri-tue",
-    "featured": true
+    "featured": false
+  },
+    {
+    "id": "game6",
+    "name": "Xếp Thú Thần Tốc",
+    "icon": "https://1617play-commits.github.io/games/game6/icon.png",
+    "url": "https://1617play-commits.github.io/games/game6/index.html",
+    "category": "giai-tri",
+    "new": true
   },
   {
     "id": "game7",
