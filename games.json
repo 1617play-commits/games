@@ -66,7 +66,15 @@
     "name": "Bóng Bàn",
     "icon": "https://1617play-commits.github.io/games/game9/icon.png",
     "url": "https://1617play-commits.github.io/games/game9/index.html",
-    "category": "nhap-vai",
+    "category": "vui-nhon",
+    "new": true
+  },
+  {
+    "id": "game10",
+    "name": "Đua Xe Đạp",
+    "icon": "https://1617play-commits.github.io/games/game10/icon.png",
+    "url": "https://1617play-commits.github.io/games/game10/index.html",
+    "category": "giai-tri",
     "new": true
   }
 ]
