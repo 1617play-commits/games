@@ -60,5 +60,13 @@
     "url": "https://1617play-commits.github.io/games/game8/index.html",
     "category": "nhap-vai",
     "featured": true
+  },
+  {
+    "id": "game9",
+    "name": "Bóng Bàn",
+    "icon": "https://1617play-commits.github.io/games/game9/icon.png",
+    "url": "https://1617play-commits.github.io/games/game9/index.html",
+    "category": "nhap-vai",
+    "new": true
   }
 ]
