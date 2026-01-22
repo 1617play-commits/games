@@ -7,12 +7,12 @@ MyGame.Result.prototype = {
     
     this.totalScore = this.add.text(game.world.width/2,200,'',{ font: "50px Microsoft YaHei", fill: "#3e3e3e", align: "center" });
     this.totalScore.anchor.set(0.5,0);
-    this.totalScore.setText('累计骑行里程数\n'+game.score/1000+'公里');
+    this.totalScore.setText('Tổng quãng đường đã đạp\n'+game.score/1000+'Km');
     this.totalScore.lineSpacing = 20;
     
     this.facingScore = this.add.text(game.world.width/2,450,'',{ font: "50px Microsoft YaHei", fill: "#3e3e3e", align: "center" });
     this.facingScore.anchor.set(0.5,0);
-    this.facingScore.setText('本次骑行里程数\n'+game.score/1000+'公里');
+    this.facingScore.setText('Quãng đường lượt đạp này\n'+game.score/1000+'Km');
     this.facingScore.lineSpacing = 20;
     
     var lotteryBtn = game.add.button(game.world.width/2,700,'ico',function(){},this);

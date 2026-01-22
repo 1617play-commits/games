@@ -47,7 +47,7 @@ MyGame.Game.prototype = {
     this.hinderGroup = game.add.group();
     this.hinderGroup.enableBody = true;
       
-    this.proName = this.add.text(game.world.width/2,46,'骑行方阵',{font: "bold 38px Microsoft YaHei", fill: "#5b3716",align:'center'})
+    this.proName = this.add.text(game.world.width/2,46,'Đội đua đạp xe',{font: "bold 38px Microsoft YaHei", fill: "#5b3716",align:'center'})
     this.proName.anchor.set(0.5,0);
     this.proName.setShadow(-2, -2, '#fce64a', 0);
       

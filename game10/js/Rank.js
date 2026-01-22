@@ -8,42 +8,42 @@ MyGame.Rank.prototype = {
     {
       rank:1,
       name:'phaser1',
-      total:'1.123公里'
+      total:'1.123Km'
     },
     {
       rank:2,
       name:'phaser2',
-      total:'1.003公里'
+      total:'1.003Km'
     },
     {
       rank:3,
       name:'phaser3',
-      total:'0.987公里'
+      total:'0.987Km'
     },
     {
       rank:4,
       name:'phaser4',
-      total:'0.909公里'
+      total:'0.909Km'
     },
     {
       rank:5,
       name:'phaser5',
-      total:'0.876公里'
+      total:'0.876Km'
     },
     {
       rank:6,
       name:'phaser6',
-      total:'0.870公里'
+      total:'0.870Km'
     },
     {
       rank:7,
       name:'phaser7',
-      total:'0.859公里'
+      total:'0.859Km'
     },
     {
       rank:8,
       name:'phaser8',
-      total:'0.709公里'
+      total:'0.709Km'
     }
     ];
   
@@ -89,7 +89,7 @@ MyGame.Rank.prototype = {
       game.rankBox.events.onDragUpdate.add(this.dragUpdate);
     }
   
-    var totalScoreTexts = this.add.text(game.world.width/2,game.world.height-160,'365骑迹淘房节,我追赶了'+game.score+'公里',{font: "bold 36px Microsoft YaHei", fill: "#5b3716"})
+    var totalScoreTexts = this.add.text(game.world.width/2,game.world.height-160,'Lễ hội đạp xe 365, tôi đã chinh phục '+game.score+'Km',{font: "bold 36px Tahoma", fill: "#5b3716"})
     totalScoreTexts.anchor.set(0.5,0);
     
     var closeBtn = game.add.button(game.world.width - 20,20,'ico',function(){
