@@ -4,10 +4,6 @@ var game = new Phaser.Game(240, 400, Phaser.CANVAS, 'game');
 game.States = {};
 
 game.States.boot = function() {
-  this.preload = function() {
-    if(typeof(GAME) !== "undefined") {
-      this.load.baseURL = GAME + "/";
-    }
     if(!game.device.desktop){
       this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
       this.scale.forcePortrait = true;
