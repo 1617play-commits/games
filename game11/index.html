@@ -33,8 +33,13 @@
     <script src="./import-map.json" type="systemjs-importmap"></script>
 
     <!-- Start game -->
-    <script>
-      System.import('./src/index.js').catch(err => console.error(err));
-    </script>
+<script>
+  System.import('cc').then(() => {
+    return System.import('./application.js');
+  }).catch(function (err) {
+    console.error(err);
+  });
+</script>
+
   </body>
 </html>
