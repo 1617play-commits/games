@@ -26,10 +26,21 @@
   <script type="systemjs-importmap" src="./import-map.json"></script>
 
   <!-- start app -->
-  <script>
-    System.import('cc')
-      .then(() => System.import('./application.js'))
-      .catch(console.error);
-  </script>
+<script>
+  Promise.all([
+    System.import('cc'),
+    System.import('./application.js')
+  ]).then(function (modules) {
+    const cc = modules[0];
+    const Application = modules[1].Application;
+
+    const app = new Application();
+    app.init(cc);
+    app.start();
+  }).catch(function (err) {
+    console.error('BOOT ERROR:', err);
+  });
+</script>
+
 </body>
 </html>
