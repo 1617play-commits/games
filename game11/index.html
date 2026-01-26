@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>to-be-immortal</title>
+
+  <!-- QUAN TRỌNG: base phải trỏ đúng thư mục -->
+  <base href="/games/game11/" />
+
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="GameDiv" style="width:100vw;height:100vh;">
+    <canvas id="GameCanvas"></canvas>
+  </div>
+
+  <!-- 1️⃣ Polyfills -->
+  <script src="./src/polyfills.bundle.js"></script>
+
+  <!-- 2️⃣ SystemJS -->
+  <script src="./src/system.bundle.js"></script>
+
+  <!-- 3️⃣ Import map (PHẢI load TRƯỚC import) -->
+  <script type="systemjs-importmap" src="./import-map.json"></script>
+
+  <!-- 4️⃣ START GAME -->
+  <script>
+    System.import('cc')
+      .then(() => System.import('./application.js'))
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
