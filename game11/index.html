@@ -7,7 +7,7 @@
   <title>to-be-immortal</title>
 
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -17,19 +17,20 @@
     <canvas id="GameCanvas"></canvas>
   </div>
 
-  <!-- Polyfills -->
+  <!-- polyfills -->
   <script src="./src/polyfills.bundle.js"></script>
 
-  <!-- SystemJS -->
+  <!-- systemjs -->
   <script src="./src/system.bundle.js"></script>
 
-  <!-- Import map -->
-  <script src="./import-map.json" type="systemjs-importmap"></script>
+  <!-- import map -->
+  <script type="systemjs-importmap" src="./import-map.json"></script>
 
-  <!-- START GAME -->
+  <!-- start app -->
   <script>
-    System.import('./application.js')
-      .catch(err => console.error(err));
+    System.import('cc')
+      .then(() => System.import('./application.js'))
+      .catch(console.error);
   </script>
 </body>
 </html>
