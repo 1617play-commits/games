@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+  <base href="/games/game11/">
+
   <title>to-be-immortal</title>
 
-  <!-- QUAN TRỌNG: base phải trỏ đúng thư mục -->
-  <base href="/games/game11/" />
-
   <meta name="viewport"
-    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div id="GameDiv" style="width:100vw;height:100vh;">
+  <div id="GameDiv">
     <canvas id="GameCanvas"></canvas>
   </div>
 
-  <!-- 1️⃣ Polyfills -->
+  <!-- Polyfills -->
   <script src="./src/polyfills.bundle.js"></script>
 
-  <!-- 2️⃣ SystemJS -->
+  <!-- SystemJS -->
   <script src="./src/system.bundle.js"></script>
 
-  <!-- 3️⃣ Import map (PHẢI load TRƯỚC import) -->
-  <script type="systemjs-importmap" src="./import-map.json"></script>
+  <!-- Import map -->
+  <script src="./import-map.json" type="systemjs-importmap"></script>
 
-  <!-- 4️⃣ START GAME -->
+  <!-- START GAME -->
   <script>
-    System.import('cc')
-      .then(() => System.import('./application.js'))
+    System.import('./application.js')
       .catch(err => console.error(err));
   </script>
 </body>
