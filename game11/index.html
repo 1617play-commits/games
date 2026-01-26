@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-
   <title>to-be-immortal</title>
 
   <meta name="viewport"
@@ -16,31 +15,32 @@
     <canvas id="GameCanvas"></canvas>
   </div>
 
-  <!-- polyfills -->
   <script src="./src/polyfills.bundle.js"></script>
-
-  <!-- systemjs -->
   <script src="./src/system.bundle.js"></script>
 
-  <!-- import map -->
-  <script type="systemjs-importmap" src="./import-map.json"></script>
+  <!-- FIX IMPORT MAP -->
+  <script type="systemjs-importmap">
+  {
+    "imports": {
+      "cc": "./cocos-js/cc.js"
+    }
+  }
+  </script>
 
-  <!-- start app -->
-<script>
-  Promise.all([
-    System.import('cc'),
-    System.import('./application.js')
-  ]).then(function (modules) {
-    const cc = modules[0];
-    const Application = modules[1].Application;
+  <script>
+    Promise.all([
+      System.import('cc'),
+      System.import('./application.js')
+    ]).then(function (modules) {
+      const cc = modules[0];
+      const Application = modules[1].Application;
 
-    const app = new Application();
-    app.init(cc);
-    app.start();
-  }).catch(function (err) {
-    console.error('BOOT ERROR:', err);
-  });
-</script>
-
+      const app = new Application();
+      app.init(cc);
+      app.start();
+    }).catch(function (err) {
+      console.error('BOOT ERROR:', err);
+    });
+  </script>
 </body>
 </html>
