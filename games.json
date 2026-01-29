@@ -76,5 +76,40 @@
     "url": "https://1617play-commits.github.io/games/game10/index.html",
     "category": "giai-tri",
     "new": true
+  },
+  {
+    "id": "game11",
+    "name": "Boxing",
+    "icon": "https://1617play-commits.github.io/games/game11/icon.png",
+    "url": "https://1617play-commits.github.io/games/game11/index.html",
+    "category": "giai-tri"
+  },
+  {
+    "id": "game12",
+    "name": "Bắn Súng",
+    "icon": "https://1617play-commits.github.io/games/game12/icon.png",
+    "url": "https://1617play-commits.github.io/games/game12/index.html",
+    "category": "ban-sung"
+  },
+  {
+    "id": "game13",
+    "name": "Máy Bay Chiến Đấu",
+    "icon": "https://1617play-commits.github.io/games/game13/icon.png",
+    "url": "https://1617play-commits.github.io/games/game13/index.html",
+    "category": "ban-sung"
+  },
+  {
+    "id": "game14",
+    "name": "22048",
+    "icon": "https://1617play-commits.github.io/games/game14/icon.png",
+    "url": "https://1617play-commits.github.io/games/game14/index.html",
+    "category": "tri-tue"
+  },
+  {
+    "id": "game15",
+    "name": "Ăn Bánh Bao",
+    "icon": "https://1617play-commits.github.io/games/game15/icon.png",
+    "url": "https://1617play-commits.github.io/games/game15/index.html",
+    "category": "giai-tri"
   }
 ]
