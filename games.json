@@ -66,7 +66,7 @@
     "name": "Đẩy Hộp",
     "icon": "https://1617play-commits.github.io/games/game9/icon.png",
     "url": "https://1617play-commits.github.io/games/game9/index.html",
-    "category": "nhap-vai",
+    "category": "tri-tue",
     "featured": false
   },
   {
@@ -82,7 +82,7 @@
     "name": "Boxing",
     "icon": "https://1617play-commits.github.io/games/game11/icon.png",
     "url": "https://1617play-commits.github.io/games/game11/index.html",
-    "category": "giai-tri"
+    "category": "hanh-dong"
   },
   {
     "id": "game12",
@@ -110,6 +110,6 @@
     "name": "Ăn Bánh Bao",
     "icon": "https://1617play-commits.github.io/games/game15/icon.png",
     "url": "https://1617play-commits.github.io/games/game15/index.html",
-    "category": "giai-tri"
+    "category": "vui-nhon"
   }
 ]
