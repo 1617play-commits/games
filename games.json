@@ -4,7 +4,7 @@
     "name": "Clash Of Vikings",
     "icon": "https://1617play-commits.github.io/games/game1/icon.png",
     "url": "https://1617play-commits.github.io/games/game1/index.html",
-  	"category": "hanh-dong"
+  	"category": "nhap-vai"
 
   },
     {
@@ -12,7 +12,7 @@
     "name": "Vượt Chướng Ngại Vật",
     "icon": "https://1617play-commits.github.io/games/game2/icon.png",
     "url": "https://1617play-commits.github.io/games/game2/index.html",
-	  "category": "vui-nhon"
+	  "category": "giai-tri"
   },
     {
     "id": "game3",
@@ -27,7 +27,7 @@
     "name": "Ếch Bắt Ruồi",
     "icon": "https://1617play-commits.github.io/games/game4/icon.png",
     "url": "https://1617play-commits.github.io/games/game4/index.html",
-  	"category": "vui-nhon",
+  	"category": "giai-tri",
     "featured": true
   },
   {
@@ -112,7 +112,7 @@
     "name": "Ăn Bánh Bao",
     "icon": "https://1617play-commits.github.io/games/game15/icon.png",
     "url": "https://1617play-commits.github.io/games/game15/index.html",
-    "category": "vui-nhon",
+    "category": "giai-tri",
     "featured": true
   }
 ]
