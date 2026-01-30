@@ -114,5 +114,13 @@
     "url": "https://1617play-commits.github.io/games/game15/index.html",
     "category": "giai-tri",
     "featured": true
+  },
+  {
+    "id": "game16",
+    "name": "Bắt Heo Con",
+    "icon": "https://1617play-commits.github.io/games/game16/icon.png",
+    "url": "https://1617play-commits.github.io/games/game16/index.html",
+    "category": "giai-tri",
+    "featured": true
   }
 ]
